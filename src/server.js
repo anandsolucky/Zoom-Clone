@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const {v4: uuidv4} = require('uuid');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -11,7 +12,11 @@ app.set('views', viewsPath)
 app.use(express.static(publicPath))
 
 app.get('/', (req, res)=> {
-    res.render('index')
+    res.redirect(`/${uuidv4()}`)
+})
+
+app.get('/:room', (req, res) => {
+    res.render('index',{roomId: req.params.room});
 })
 
 app.listen(PORT, () => {
