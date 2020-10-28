@@ -6,7 +6,8 @@ video {
     height: 300px;
     width: 400px;
     border-radius: 10px;
+    object-fit: cover;
 }
-.container {
+.container { 
     margin: 0 auto;
 }
