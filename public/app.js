@@ -4,7 +4,7 @@ const socket = io("/");
 var peer = new Peer(undefined, {
     path: '/peerjs',
     host: '/',
-    port: PORT
+    port: '3000',
 }); 
 
 const videoGrid = document.getElementById('video-grid');
@@ -25,11 +25,13 @@ navigator.mediaDevices.getUserMedia({
     peer.on('call', call => {
         call.answer(stream)
         const video = document.createElement('video');
+        console.log("video tag created answer side");
         call.on('stream', userVideoStream => {
+            console.log("adding video stream on answer side");
             addVideoStream(video, userVideoStream);
         })
     })
-    socket.on('user-connected', (userid) => {
+    socket.on('user-connected', userid => {
         connectToNewUser(userid, stream);
     })
     
@@ -45,8 +47,10 @@ const connectToNewUser = (userid, stream) => {
     console.log("new user: " + userid + " connected! ");
     const call = peer.call(userid, stream);
     const video = document.createElement('video');
-    call.on('stream', myVideoStream => {
-        addVideoStream(video, myVideoStream);
+    console.log("video tag created server side");
+    call.on('stream', userVideoStream => {
+        console.log("adding video stream on server side");
+        addVideoStream(video, userVideoStream);
     })
 }
 
