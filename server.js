@@ -25,7 +25,7 @@ app.get('/', (req, res)=> {
 })
 
 app.get('/:room', (req, res) => {
-    res.render('index',{roomId: req.params.room});
+    res.render('index',{roomId: req.params.room, port: PORT});
 })
 
 io.on('connection', socket => {
