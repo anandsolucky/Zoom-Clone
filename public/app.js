@@ -3,7 +3,7 @@ const socket = io('/')
 const videoGrid = document.getElementById('video-grid')
 const myPeer = new Peer(undefined, {
   host: '/',
-  port: '3001'
+  port: '441'
 })
 const myVideo = document.createElement('video')
 myVideo.muted = true
