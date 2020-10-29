@@ -99,3 +99,10 @@ video {
     color: white;
     list-style: none;
 }
+.unmute {
+    color: #CC3B33;
+}
+
+.Videostopped {
+    color: #CC3B33;
+}
