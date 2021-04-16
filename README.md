@@ -3,6 +3,8 @@
 Checkout the app:
 https://zoom-clone-by-anand.herokuapp.com/
 
+**NOTE: Please ALLOW Video/Audio access in the browser!**
+
 
 ## Instructions
 
@@ -13,3 +15,10 @@ ex. https://zoom-clone-by-anand.herokuapp.com/0eeeb2d-1dc8-45c1-ba1e-02eb4f48964
 copy the same the entire url(along with new generated id) and send it to anyone who wants to connect to the room, that's it!
 
 #### enjoy the meeting 😆
+
+### Features
+
+* Live Video share
+* Live Chat window
+* Mute Audio
+* Disable Video
