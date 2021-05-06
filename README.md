@@ -1,7 +1,7 @@
 # Zoom-Clone
 
 Checkout the app:
-https://zoom-clone-by-anand.herokuapp.com/
+https://zoom-clone-anand.herokuapp.com
 
 **NOTE: Please ALLOW Video/Audio access in the browser!**
 
